@@ -3,14 +3,13 @@
 
 ---
 
-## ⚡ Як підняти за 3 хвилини
-
-### 1. Побудувати образ
-```bash
+Як підняти за 3 хвилини
+ 1. Побудувати образ
+bash
 docker build -t stats-app .
 
 
-### 2. Запустити контейнер
+ 1. Запустити контейнер
 
 docker run --rm stats-app
 
@@ -24,3 +23,19 @@ docker run --rm stats-app
 - StatUpdater.py — оновлення статистики
 - fb_spend.json — дані витрат Facebook
 - network_conv.json — дані конверсій мережі
+
+Залежності
+Встановлюються напряму при побудові образу:
+- apscheduler
+- pytest
+
+
+Тестування
+Запустити інтерактивний контейнер і виконати тести:
+
+docker run -it --rm stats-app pytest
+
+
+
+
+
