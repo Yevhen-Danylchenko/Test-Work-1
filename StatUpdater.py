@@ -34,7 +34,7 @@ class StatsUpdater:
             results.append((date, campaign_id, spend, conversions, cpa))
 
         self.db.upsert(results)
-        print(f"Обновлено {len(results)} записів")
+        print(f"Обновлено {len(results)} записей")
 
     def schedule_updates(self, start_date, end_date):
         scheduler = BackgroundScheduler()
@@ -42,4 +42,4 @@ class StatsUpdater:
                           args=[start_date, end_date],
                           max_instances=1)
         scheduler.start()
-        print("Планувальник запущено. Оновлення кожну годину.")
+        print("Планировщик запущен. Обновление каждий час.")

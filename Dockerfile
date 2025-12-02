@@ -10,6 +10,7 @@ COPY main.py .
 COPY StatsDB.py .
 COPY DataLoader.py .
 COPY StatUpdater.py .
+COPY test_stats.py .
 COPY fb_spend.json .
 COPY network_conv.json .
 
